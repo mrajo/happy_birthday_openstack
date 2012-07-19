@@ -1,7 +1,7 @@
 <?php
-// Hello, I'm Lexy.
-## GREETINGS! I'm Yacco! I WANT TO BE A H4X0R!
-// Well here's an easy task. Just wish OpenStack a happy birthday.
+// Hello, I'm Anthony.
+## GREETINGS! I'm DerpCoder! I WANT TO BE A H4X0R!
+// Well you can practice with this easy task. Just wish OpenStack a happy birthday.
 ## HA! I will amaze you with my technique. I just need some tools to prepare this message.
 ## Now, if only I had those wooden alphabet blocks that babies use to learn their ABCs.
 // Hmm, that's an interesting abstraction to model. Which language? Ruby? Python?
@@ -32,12 +32,24 @@ eval("list($ascii_var_list) = \$ascii;");
 // Are you high? Is that an eval? Did you just pollute the global namespace with a couple dozen useless variables?
 ## Impressive, is it not?
 // Agreed, it is not.
+## I think I need upper and lower case letters, and a space
+
+$alpha = range('a', 'z');
+$ascii = range(ord('a'), ord('a') + count($alpha) - 1, pi() / pi());
+$alpha_vars = array_map(function($_) { return "$$_"; }, $alpha);
+$ascii_var_list = join(',', $alpha_vars);
+eval("list($ascii_var_list) = \$ascii;");
+$sp = 32;
+
+// There are no words...
+## I see you are speechless by my skillz
+// It's hard to talk through the vomit
 ## Now we just need to pull our greeting from a data persistance layer, in case we want to change the message later
 ## I will use Twitter as my data store
 // Oh dear god...
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, 'https://twitter.com/MachineEpsilon/status/225495479025278977');
+curl_setopt($ch, CURLOPT_URL, 'https://twitter.com/MachineEpsilon/status/225805190392070145');
 curl_setopt($ch, CURLOPT_HEADER, false);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $tweet = curl_exec($ch);
@@ -50,32 +62,31 @@ $greeting = $matches[2];
 // ::poker face::
 ## Now I need to assemble the format string for printing
 
-$_='_';                   $s='s';            $hb=$$$_.
-$$$$$$s.               $$$$$_.$$$$s.         $$$$$$$_.
-$$$$$$s.              $$$$$_.   $$$$$s.      $$$$$$$_.
-$$$$$$s.             $$$$$_.     $$$$s.      $$$$$$$_.
-$$$$$$s.             $$$$$_.     $$$$s.      $$$$$$$_.
-$$$$$$s.             $$$$$_.     $$$$s.      $$$$$$$_.
-$$$$$$s.             $$$$$_.     $$$$s.      $$$$$$$_.
-$$$$$$s.             $$$$$_.     $$$$s.      $$$$$$$_.
-$$$$$$s.             $$$$$_.     $$$$s.      $$$$$$$_.
-$$$$$$s.             $$$$$_.     $$$$s.      $$$$$$$_.
-$$$$$$$$$$$$$$s.      $$$$_.    $$$$s.       $$$$$$$$$$$$$$$$_.
-$$$$$$$$$$$$$$s.       $$$$$_.$$$$s.         $$$$$$$$$$$$$$$$_.
-$$$$$$$$$$$$$$s.         $$$$$$$$_.          $$$$$$$$$$$$$$$$s;
+$_='_';                  $ss='ss';           $hb=$$$_.
+$$$$$ss.               $$$$$_.$$$$ss.        $$$$$$$_.
+$$$$$ss.              $$$$$_.   $$$$ss.      $$$$$$$_.
+$$$$$ss.             $$$$$_.     $$$ss.      $$$$$$$_.
+$$$$$ss.             $$$$$_.     $$$ss.      $$$$$$$_.
+$$$$$ss.             $$$$$_.     $$$ss.      $$$$$$$_.
+$$$$$ss.             $$$$$_.     $$$ss.      $$$$$$$_.
+$$$$$ss.             $$$$$_.     $$$ss.      $$$$$$$_.
+$$$$$ss.             $$$$$_.     $$$ss.      $$$$$$$_.
+$$$$$ss.             $$$$$_.     $$$ss.      $$$$$$$_.
+$$$$$$$$$$$$$ss.      $$$$_.    $$$$ss.      $$$$$$$$$$$$$$$$_.
+$$$$$$$$$$$$$ss.       $$$$$_.$$$$ss.        $$$$$$$$$$$$$$$$_.
+$$$$$$$$$$$$$ss.         $$$$$$$$_.          $$$$$$$$$$$$$$$ss;
 
 // I think I just heard the PHP parser cry at the sight of so many variable variables.
 ## We're almost done. Just gotta decrypt my data, prepare my formatting, yadda yadda...
 
-$sp = 32;
-$decrypted_data = str_rot13($greeting);
-$john_purrier_rocks = str_split($decrypted_data);
+$decrypted_data            = str_rot13($greeting);
+$john_purrier_rocks        = str_split($decrypted_data);
 $brandon_philips_kicks_ass = array_map(function($_) { return ($_ === ' ') ? '$sp' : "\$$_"; }, $john_purrier_rocks);
-$rabble_makes_me_moist = join(',', $brandon_philips_kicks_ass);
-                         eval("\$rabble_makes_me_moist = array($rabble_makes_me_moist);");
-$appfog_owns = array_map('chr', $rabble_makes_me_moist);
-               array_unshift($appfog_owns, strtr($hb, '_', '%'));
-$happy_birthday = str_replace('stack', 'Stack', ucwords(strtolower(call_user_func_array('sprintf', $appfog_owns))));
+$rabble_makes_me_moist     = join(',', $brandon_philips_kicks_ass);
+                             eval("\$rabble_makes_me_moist = array($rabble_makes_me_moist);");
+$appfog_owns               = array_map('chr', $rabble_makes_me_moist);
+                             array_unshift($appfog_owns, str_replace('_s', '%', $hb));
+$happy_birthday            = str_replace('s', 'S', ucwords(strtolower(call_user_func_array('sprintf', $appfog_owns))));
 echo $happy_birthday;
 
 // What the hell is the matter with you?!
