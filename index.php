@@ -21,8 +21,8 @@ $alpha = range('A', 'Z');
 
 $ascii = array_map(function($_) { return $_ + (1 << 1 << 1 << 1 << 1 << 1 << 1); }, range(1, 26));
 
-// Stop what you're doing. I can't begin to imagine where you even came up with that garbage code.
-## Just a few more touches...
+// Stop what you're doing. I can't begin to comprehend where you even came up with that nonsense.
+## Don't worry about it. Just a few more touches...
 
 $alpha_vars = array_map(function($_) { return "$$_"; }, $alpha);
 $ascii_var_list = join(',', $alpha_vars);
@@ -32,7 +32,7 @@ eval("list($ascii_var_list) = \$ascii;");
 // Are you high? Is that an eval? Did you just pollute the global namespace with a couple dozen useless variables?
 ## Impressive, is it not?
 // Agreed, it is not.
-## I think I need upper and lower case letters, and a space
+## I think I need upper and lower case letters, and a space...
 
 $alpha = range('a', 'z');
 $ascii = range(ord('a'), ord('a') + count($alpha) - 1, pi() / pi());
@@ -76,7 +76,7 @@ $$$$$$$$$$$$$ss.      $$$$_.    $$$$ss.      $$$$$$$$$$$$$$$$_.
 $$$$$$$$$$$$$ss.       $$$$$_.$$$$ss.        $$$$$$$$$$$$$$$$_.
 $$$$$$$$$$$$$ss.         $$$$$$$$_.          $$$$$$$$$$$$$$$ss;
 
-// I think I just heard the PHP parser cry at the sight of so many variable variables.
+// I think I just heard the PHP parser cry.
 ## We're almost done. Just gotta decrypt my data, prepare my formatting, yadda yadda...
 
 $decrypted_data            = str_rot13($greeting);
